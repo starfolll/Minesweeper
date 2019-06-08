@@ -4,6 +4,7 @@ class WindowsManager {
         game: document.getElementById("game"),
         scores: document.getElementById("scores"),
         settings: document.getElementById("settings"),
+        singUp: document.getElementById("sing_up"),
     };
 
     static TargetWindow(window) {

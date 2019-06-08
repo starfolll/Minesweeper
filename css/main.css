@@ -18,6 +18,8 @@
 
     --game-board-columns: 5;
     --game-board-rows: 5;
+
+    --player-level-in-percent: 0%;
 }
 
 html, body {

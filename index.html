@@ -2,13 +2,15 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>The Sapper</title>
+    <title>Minesweeper</title>
 
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/window.css">
+
     <link rel="stylesheet" href="css/windows/menu.css">
     <link rel="stylesheet" href="css/windows/scores.css">
     <link rel="stylesheet" href="css/windows/game.css">
+    <link rel="stylesheet" href="css/windows/singUp.css">
 </head>
 <body>
 
@@ -16,14 +18,36 @@
 <canvas id="animation" class="window"></canvas>
 
 <!--WINDOWS-->
+<div id="sing_up" class="window sing-up">
+    <h1>[ Sing up ]</h1>
+
+    <div class="selectable">
+        <input placeholder="< Enter your nick >" id="sing_up_input_nick" class="sing-up-input" type="text">
+        <div></div>
+    </div>
+
+    <div id="sing_up_input_submit" class="selectable">
+        Submit
+        <div></div>
+    </div>
+</div>
+
 <div id="menu" class="window menu">
-    <h1>[ The Sapper ]</h1>
+    <h1>[ Minesweeper ]</h1>
+    <div class="user-nick-level">
+        <p id="menu_user_nick"></p>
+        <div class="user-level">
+            <div id="menu_user_xp"></div>
+            <p id="menu_user_level"></p>
+        </div>
+    </div>
+
     <div class="options">
         <div id="menu_option_play" class="selectable">
             Play
             <div></div>
         </div>
-        <div style="display: none;" id="menu_option_scores" class="selectable">
+        <div id="menu_option_scores" class="selectable">
             Scores
             <div></div>
         </div>
@@ -84,6 +108,7 @@
 
 <!--SCRIPTS-->
 <script src="js/windowsManager.js"></script>
+<script src="js/levelSystem.js"></script>
 
 <!--GAME-->
 <script src="js/game/spot.js"></script>

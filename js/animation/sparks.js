@@ -27,7 +27,7 @@ class Sparks extends Animation {
     Play(ctx) {
         ctx.beginPath();
         ctx.rect(0, 0, window.innerWidth, window.innerHeight);
-        ctx.fillStyle = "rgba(0,0,0,0.3)";
+        ctx.fillStyle = "rgba(0,0,0,0.1)";
         ctx.fill();
 
         this.sparks.forEach(s => {

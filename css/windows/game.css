@@ -12,11 +12,6 @@
 
     grid-template-columns: repeat(var(--game-board-columns), auto);
     grid-template-rows: repeat(var(--game-board-rows), auto);
-
-    padding: 5px;
-    border: 2px solid var(--main-color);
-    border-radius: 10px;
-    box-shadow: inset 0 0 10px var(--second-color);
 }
 
 .game-spot {

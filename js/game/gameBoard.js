@@ -9,6 +9,7 @@ class GameBoard {
         this.spots = [];
 
         this.isGameStoped = false;
+        this.spotsExplored = 0;
 
         document.documentElement.style.setProperty(
             '--game-board-columns',
@@ -65,6 +66,7 @@ class GameBoard {
                         this.OpenBoard();
                         this.Lose();
                     } else {
+                        this.spotsExplored++;
                         if (spot.num === 0) {
                             for (let y = -1 + spot.y; y < 2 + spot.y; y++) {
                                 for (let x = -1 + spot.x; x < 2 + spot.x; x++) {
@@ -110,6 +112,7 @@ class GameBoard {
     Win(){
         this.isGameStoped = true;
         document.getElementById("menu_option_play").innerHTML = "You won !<div></div>";
+        LevelSystem.AddXp((this.columns * this.rows * 0.75) | 0);
 
         setTimeout(()=>{
             WindowsManager.TargetWindow(WindowsManager.windows.menu);
@@ -119,6 +122,7 @@ class GameBoard {
     Lose(){
         this.isGameStoped = true;
         document.getElementById("menu_option_play").innerHTML = "Try again ?<div></div>";
+        LevelSystem.AddXp((this.spotsExplored / 4) | 0);
 
         setTimeout(()=>{
             WindowsManager.TargetWindow(WindowsManager.windows.menu);

@@ -1,0 +1,29 @@
+.sing-up{
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    grid-gap: 10px;
+
+    grid-template-columns: auto;
+
+    color: var(--main-color);
+}
+
+.sing-up-input{
+    outline: none;
+    width: 100%;
+    border: none;
+    padding: 5px 0;
+    color: var(--main-color);
+    background: transparent;
+    font-size: 18px;
+    text-align: center;
+    text-shadow: 0 0 10px var(--main-color);
+}
+
+.sing-up-input::placeholder{
+    opacity: 0.7;
+    text-shadow: 0 0 10px var(--main-color);
+    font-size: 18px;
+    color: var(--main-color);
+}
