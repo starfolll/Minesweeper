@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>The Sapper</title>
+
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/window.css">
+    <link rel="stylesheet" href="css/windows/menu.css">
+    <link rel="stylesheet" href="css/windows/scores.css">
+    <link rel="stylesheet" href="css/windows/game.css">
+</head>
+<body>
+
+<!--CANVAS WITH ANIMATION-->
+<canvas id="animation" class="window"></canvas>
+
+<!--WINDOWS-->
+<div id="menu" class="window menu">
+    <h1>[ The Sapper ]</h1>
+    <div class="options">
+        <div id="menu_option_play" class="selectable">
+            Play
+            <div></div>
+        </div>
+        <div style="display: none;" id="menu_option_scores" class="selectable">
+            Scores
+            <div></div>
+        </div>
+    </div>
+
+    <div class="tape">
+        <p>
+            Also try <br>
+            <a href="https://starfolll.github.io/CardFlipGame/">
+                Flip card game
+            </a>
+        </p>
+    </div>
+</div>
+
+<div id="game" class="window game">
+    <div id="gameBoard" class="game-board"></div>
+</div>
+
+<div id="scores" class="window scores">
+    <h1>[ Scores ]</h1>
+    <div>
+        <div class="score place-gold">
+            <div>Gold place</div>
+            <div>10:01:10</div>
+        </div>
+        <div class="score place-silver">
+            <div>Silver place</div>
+            <div>10:01:10</div>
+        </div>
+        <div class="score place-cooper">
+            <div>Cooper place</div>
+            <div>10:01:10</div>
+        </div>
+    </div>
+    <hr>
+    <div class="gray_places">
+        <div class="score">
+            <div>Me</div>
+            <div>10:01:10</div>
+        </div>
+    </div>
+    <div id="scores_back" class="selectable">
+        Back
+        <div></div>
+    </div>
+</div>
+
+<div id="settings" class="window settings">
+    <h1>[ Settings ]</h1>
+</div>
+
+<!--ANIMATION-->
+<script src="js/animation/animation.js"></script>
+<script src="js/animation/canvasManager.js"></script>
+<script src="js/animation/spark.js"></script>
+<script src="js/animation/sparks.js"></script>
+
+<!--SCRIPTS-->
+<script src="js/windowsManager.js"></script>
+
+<!--GAME-->
+<script src="js/game/spot.js"></script>
+<script src="js/game/gameBoard.js"></script>
+
+<!--MAIN LOGIC-->
+<script src="js/logic.js"></script>
+
+</body>
+</html>

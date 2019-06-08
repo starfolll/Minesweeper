@@ -1,0 +1,57 @@
+.menu {
+    display: grid;
+    justify-content: center;
+    align-content: center;
+}
+
+.menu > .options {
+    display: grid;
+    grid-gap: 15px;
+}
+
+.tape {
+    transition: width 0.5s, height 0.5s, top 0.5s, right 0.5s;
+
+    position: fixed;
+    top: -103px;
+    right: -103px;
+
+    width: 200px;
+    height: 200px;
+
+    background: var(--game-background);
+    border: 3px solid var(--main-color);
+
+    transform: rotate(45deg);
+
+    display: grid;
+    justify-content: center;
+    align-content: center;
+
+    color: var(--main-color);
+    text-align: center;
+    font-size: 16px;
+    text-shadow: 0 0 10px var(--main-color);
+}
+
+.tape:hover {
+    top: -128px;
+    right: -128px;
+    width: 250px;
+    height: 250px;
+}
+
+
+.tape > p {
+    transition: margin-top 0.5s;
+    margin-top: 130px;
+}
+
+.tape:hover > p {
+    margin-top: 160px;
+}
+
+.tape > p > a {
+    color: var(--second-color);
+    text-shadow: 0 0 20px var(--second-color);
+}
