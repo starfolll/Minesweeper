@@ -1,2 +1,2 @@
-# The-Sapper
+# Minesweeper
 simple old game
